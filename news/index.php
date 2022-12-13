@@ -73,7 +73,7 @@ $APPLICATION->IncludeComponent(
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
-		"NEWS_COUNT" => "6",
+		"NEWS_COUNT" => "1000",
 		"PAGER_BASE_LINK_ENABLE" => "Y",
 		"PAGER_DESC_NUMBERING" => "N",
 		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",

@@ -71,7 +71,7 @@ $this->setFrameMode(true);
 
    </div>
 
-
+<?/*?>
    <div class="pages pages__news">
      <il class="pages__inner">
        <li class="pages__item pages--first">Начало</li>
@@ -82,7 +82,7 @@ $this->setFrameMode(true);
        <li class="pages__item pages--last"><a href="#!">Конец</a></li>
      </il>
    </div>
-
+<?*/?>
    <!-- <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
    <div class="pages pages__news"><?=$arResult["NAV_STRING"]?></div>
    <?endif;?> -->
