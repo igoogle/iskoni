@@ -1,0 +1,28 @@
+.crm-webform-header{
+    color: #fff !important;
+}
+.crm-webform-body {
+    background: rgba(220,226,201,0.2);
+}
+.crm-webform-header-container{
+    border-bottom: none !important;
+}
+
+.crm-webform-input + i::after {
+    color: #96B11F;
+}
+#crm-web-form-id-52 .crm-webform-body{}
+.bx-flag-24.ru{background:none !important;}
+
+.crm-webform-wrapper .crm-webform-block .crm-webform-body,
+.crm-webform-wrapper .crm-webform-block .crm-webform-header-container {
+    background: #BCD031;
+}
+.crm-webform-checkbox-name,
+.crm-webform-header-container > div,
+.crm-webform-label{
+    color: #000 !important;
+}
+.crm-webform-submit-button {
+    border-radius: 8px !important;
+}

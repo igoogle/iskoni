@@ -1,0 +1,23 @@
+User-agent: *
+Allow: *
+Disallow: */confidential.html
+Disallow: *?cm_id
+
+Clean-param: SIZEN_1
+Clean-param: t[5]
+Clean-param: t[4]
+Clean-param: t[3]
+Clean-param: t[2]
+Clean-param: t[1]
+
+User-agent: Yandex
+Clean-param: t[5]
+Clean-param: t[4]
+Clean-param: t[3]
+Clean-param: t[2]
+Clean-param: t[1]
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://retrobloha.ru/sitemap.xml

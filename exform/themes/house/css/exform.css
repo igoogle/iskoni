@@ -1,0 +1,86 @@
+@import url("../../../css/mform.css");
+
+.exform_wrapper.callback {width:360px; font:20px 'Helvetica Neue', Helvetica, Arial, sans-serif; color:#000; background:#fff; border:none; padding:35px 25px 20px; border-radius:0;}
+
+.exform_wrapper.callback .exform_header {text-align:center; padding:5px 0; margin:5px; color: #000; text-transform:uppercase; font-size: 24px;}
+.exform_wrapper.callback .exform_addmsg {text-align:center; font-size:15px; margin:10px 0 0; color: #555;}
+.exform_wrapper.callback .exform_addmsg.lower-msg {
+    text-align: left;
+    font-size: 11px;
+    margin: 10px 0 15px;
+    color: #777;
+}
+.exform_wrapper.callback input[type="text"]:focus, .exform_wrapper.callback .exform_wrapper textarea:focus {background:#ffd;}
+.exform_wrapper.callback .inpt_wrpr {padding:15px 0;}
+.exform_wrapper.callback input[type="text"], 
+.exform_wrapper.callback textarea {
+	  font-size: 15px;
+  border: 1px solid #ccc;
+  padding: 0px 7px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  height: 52px;
+  text-align: left;
+  margin: 5px 0px;
+  width: 100%;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.exform_wrapper.callback textarea{height:50px; resize:none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+
+.exform_wrapper.callback div.err {height:0; float:right; position:relative; left:0; top:11px;}
+
+.exform_wrapper.callback .mf_submit {text-align:center; margin-top:7px;}
+.exform_wrapper.callback .mf_submit .send_btn{   
+	/*opacity: 0.5;*/
+
+  background-color: #f16522;
+  cursor: default;
+  font-weight:bold;
+  color:white;
+  padding:5px 20px;
+  margin: 0;
+  height: 52px;
+  width: 100%;
+  font-size: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: -1px -1px 1px rgb(0 0 0 / 9%);
+  box-shadow: -1px -1px 1px rgb(0 0 0 / 9%);
+  outline: 0;
+  border: 0;
+    border-radius: 4px;
+    transition: all .2s ease;
+
+ }
+
+ .exform_wrapper.callback .mf_submit .send_btn:hover{
+   opacity: 0.7;
+ }
+
+.exform_wrapper.callback .exf_captcha input[type="text"], .exform_wrapper.callback .captcha_img {float:left;}
+.exform_wrapper.callback .exf_captcha input[type="text"] {width:130px;}
+.exform_wrapper.callback .captcha_img {width:160px; height:34px; margin:2px 0 0 4px;} 
+#mf_captcha_callback {width:160px; border:solid 1px #ccc;}
+.exform_wrapper.callback .exf_captcha a {display:block; width:32px; height:32px; float:right; margin:4px -10px 0 0; background:url(refresh.png);}
+
+.exform_wrapper.callback.finmsg {width:400px; min-height:50px; padding:10px; position:absolute; left:50%; top:50%; margin:-60px 0 0 -200px;}
+.exform_wrapper.callback.finmsg p{text-align:center;}
+.exf_captcha {display: none;}
+.close_btn {
+	width: 20px!important;
+	height: 20px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: url('/exform/imgs/exit.png') no-repeat;
+	background-size: 100%;
+	border: none;
+	cursor: pointer;
+}
+
+.close_btn:focus { outline: none; }
+
+.lab{
+	font-size:13px;
+}

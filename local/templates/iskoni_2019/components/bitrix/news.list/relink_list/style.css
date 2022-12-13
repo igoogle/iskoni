@@ -1,0 +1,21 @@
+.relink-detail-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.relink-title {
+    font-weight: bold;
+}
+.relink-detail-list .item {
+    background-color: #EC6F16;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+    padding: 4px 6px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+.product .product-gallery,
+.product .product-info {
+    margin-bottom: 0;
+}

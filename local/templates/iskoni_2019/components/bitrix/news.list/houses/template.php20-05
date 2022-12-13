@@ -1,0 +1,97 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+/** @var array $arParams */
+/** @var array $arResult */
+/** @global CMain $APPLICATION */
+/** @global CUser $USER */
+/** @global CDatabase $DB */
+/** @var CBitrixComponentTemplate $this */
+/** @var string $templateName */
+/** @var string $templateFile */
+/** @var string $templateFolder */
+/** @var string $componentPath */
+/** @var CBitrixComponent $component */
+$this->setFrameMode(true);
+
+DBG::pred(count($arResult["ITEMS"]));
+
+$is_mobile = check_mobile_device();
+
+?>
+
+<div class="project-body">
+    <div class="row ">
+    
+    	<? $i=0; foreach($arResult["ITEMS"] as $arItem):?>
+		<?
+		$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+		$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+
+        // DBG::pred($arItem);
+        $i++;
+
+		?>
+        <div class="col-4" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
+            <div class="card">
+                <div class="card-thumb">
+                    <a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+                        <?php
+                            if($is_mobile){
+                                $mobile_image = CFile::ResizeImageGet(
+                                    $arItem["PREVIEW_PICTURE"]["ID"],
+                                    array(
+                                        'width' => 380,
+                                        'height' => 200
+                                    ),
+                                    BX_RESIZE_IMAGE_PROPORTIONAL,
+                                    true,
+                                    Array(),
+                                    false,
+                                    70
+                                );
+                                $mobile_image = $mobile_image['src'];
+                            }
+                            else $mobile_image = '';
+                        ?>
+                        <img class="lazy" src="/bitrix/images/1.gif" data-src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>"  data-mobile-src="<?=$mobile_image?>" alt="<?=$arItem["PREVIEW_PICTURE"]["ALT"]?>">
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="card-head">
+                        <h6 class="card-title">
+                            <a href="<?=$arItem["DETAIL_PAGE_URL"]?>">
+                                <?=$arItem["NAME"]?>
+                            </a>
+                        </h6>
+
+                        <div class="card-meta">
+                            <?=$arItem["PROPERTIES"]['SIZE_FULL']['VALUE']?> м&sup2;
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="card-price">
+                                <?=number_format($arItem["PROPERTIES"]['PRICE']['VALUE'], 2, '.', '&nbsp;')?> млн.руб.
+                            </div>
+
+                            <a href="<?=$arItem["DETAIL_PAGE_URL"]?>" class="card-more">
+                                <svg class="icon s-arrow_orange"><use xlink:href="#s-arrow_orange"></use></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?endforeach;?>
+
+    </div>
+
+	<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+    <div class="text-center">
+        <a href="/<?=$arResult['CODE']?>/" class="btn-more">
+            Посмотреть еще дома
+        </a>
+    </div>
+	<?endif;?>
+
+</div>

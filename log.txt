@@ -1,0 +1,11 @@
+Array
+(
+    [MATERIAL] => Утепленный клееный брус
+    [EHTAZHNOST] => одноэтажный
+    [TIP_KROVLI] => металлочерепица
+    [TIP_FUNDAMENTA] => ленточный
+    [OBSHCHAYA_PLOSHCHAD] => до 100 кв. м
+    [NAME] => test
+    [PHONE] => 79999999999
+    [EMAIL] => test@test.ru
+)

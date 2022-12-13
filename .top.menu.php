@@ -1,0 +1,67 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О компании", 
+		"/about/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Проекты", 
+		"/catalog/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Бани", 
+		"/catalog/bani/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Прозводство", 
+		"/tech/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Утепление", 
+		"/warming/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Галерея", 
+		"/catalog/ready/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новости", 
+		"/news/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

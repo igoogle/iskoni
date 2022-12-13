@@ -1,0 +1,7 @@
+User-agent: *
+Allow: *
+Disallow: */confidential.html
+Disallow: *?cm_id
+Sitemap: https://retrobloha.ru/sitemap.xml
+Clean-param: SIZEN_1
+Clean-param: t[4]

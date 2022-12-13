@@ -1,0 +1,50 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
+<div class="loc-inner">
+    <div class="row">
+        <div class="col-3-24 md-hide"></div>
+        <div class="col-5 md-w100">
+            <div class="loc-item">
+                <div class="loc-icon">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/images/Moscow.svg" alt="">
+                </div>
+                <h4 class="loc-title">
+                    Москва
+                </h4>
+                <div class="loc-body">
+                    <?=nl2br( \Bitrix\Main\Config\Option::get("grain.customsettings","ADDR_MSK") ) ?>
+                </div>
+            </div>
+        </div>
+        <div class="col-3-24 md-hide"></div>
+
+        <div class="col-4 md-w100" style="padding: 0;">
+            <div class="loc-item">
+                <div class="loc-icon">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/images/Kazan.svg" alt="">
+                </div>
+                <h4 class="loc-title">
+                    Казань
+                </h4>
+                <div class="loc-body">
+                   <?=nl2br( \Bitrix\Main\Config\Option::get("grain.customsettings","ADDR_KAZ") ) ?>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-4">
+            <div class="loc-item">
+                <div class="loc-icon">
+                    <img src="<?=SITE_TEMPLATE_PATH?>/images/Sevastopol.svg" alt="">
+                </div>
+                <h4 class="loc-title">
+                    Крым
+                </h4>
+                <div class="loc-body">
+                   <?=nl2br( \Bitrix\Main\Config\Option::get("grain.customsettings","ADDR_SEV") ) ?>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>

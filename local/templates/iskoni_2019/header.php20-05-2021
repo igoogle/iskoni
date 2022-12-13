@@ -1,0 +1,644 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+
+define('IS_PERSONAL', (CSite::InDir('/personal/')) );
+
+?><!DOCTYPE html>
+<html lang="ru">
+<head itemscope itemtype="http://schema.org/WPHeader">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title itemprop="headline"><?$APPLICATION->ShowTitle()?></title>
+	<link rel="shortcut icon" type="image/x-icon" href="/favicon.png" />
+ <!-- <meta name="viewport" content="width=device-width, initial-scale=1">-->
+ <meta  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ <meta name="format-detection" content="telephone=no">
+ <meta name="yandex-verification" content="d9167c8b22c1d7db" />
+ <meta http-equiv="x-rim-auto-match" content="none">
+
+
+
+ <meta property="og:title" content="ИСКОНИ - философия своего дома"/>
+ <meta property="og:description" content=""/>
+ <meta property="og:image" content="https://iskoni.ru/local/templates/iskoni_2019/images/logo_top.svg"/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:url" content= "https://iskoni.ru/" />
+
+
+ <link rel="preload" href="https://iskoni.ru/local/templates/iskoni_2019/fonts/MyriadPro/MyriadPro-Regular.woff" as="font" type="font/woff" crossorigin="anonymous">
+ <link rel="preload" href="https://iskoni.ru/local/templates/iskoni_2019/fonts/MyriadPro/MyriadPro-Cond.woff" as="font" type="font/woff" crossorigin="anonymous">
+ <link rel="preload" href="https://iskoni.ru/local/templates/iskoni_2019/fonts/MyriadPro/MyriadPro-SemiCn.woff" as="font" type="font/woff" crossorigin="anonymous">
+ <link rel="preload" href="https://browser.sentry-cdn.com/4.5.2/bundle.min.js" as="script" crossorigin="anonymous">
+
+
+
+
+
+ <!-- Vendor CSS -->
+ <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/libs/slick/slick.css");?>
+ <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/libs/fancybox/jquery.fancybox.min.css");?>
+ <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/libs/jquery-ui/jquery-ui.min.css");?>
+ <?$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/style1.min.css");?>
+
+ <!-- Vendor JS -->
+ <!--script src="<?=SITE_TEMPLATE_PATH?>/libs/jquery/jquery-3.2.1.min.js"></script-->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <?$APPLICATION->ShowHead();?>
+
+ <?$APPLICATION->IncludeComponent(
+    "bitrix:main.include",
+    "",
+    Array(
+        "AREA_FILE_SHOW" => "file",
+        "PATH" => SITE_DIR."local/include/counters_head.php"
+    )
+);?>
+
+    <? /*if ($APPLICATION->GetCurPage(false) == SITE_DIR): ?>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<? endif */?>
+    <!--script id="bx24_form_inline" data-skip-moving="true">
+        (function(w,d,u,b){w['Bitrix24FormObject']=b;w[b] = w[b] || function(){arguments[0].ref=u;
+            (w[b].forms=w[b].forms||[]).push(arguments[0])};
+            if(w[b]['forms']) return;
+            var s=d.createElement('script');s.async=1;s.src=u+'?'+(1*new Date());
+            var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://iskoni.bitrix24.ru/bitrix/js/crm/form_loader.js','b24form');
+
+        b24form({"id":"54","lang":"ru","sec":"l9gj1e","type":"inline"});
+    </script-->
+</head>
+
+<!-- <script>
+document.addEventListener('DOMContentLoaded', function(){
+    document.querySelectorAll('a').forEach( elem => {
+        if(elem.getAttribute('href') == window.location.href || elem.getAttribute('href') == window.location.pathname){
+            elem.setAttribute('href', '#');
+        }
+    })
+})
+
+</script>
+-->
+
+
+<body>  
+
+    <div hidden itemscope itemtype="http://schema.org/Organization">
+     <div itemprop="name">ИСКОНИ - философия своего дома</div>
+     <div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+      <img itemprop="contentUrl" src="https://iskoni.ru/local/templates/iskoni_2019/images/logo_top.svg" alt="Logo">
+  </div>
+  <link itemprop="url" href="https://iskoni.ru/">
+  <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+      <span itemprop="postalCode"></span>,
+      <span itemprop="addressCountry">Россия</span>, 
+      <span itemprop="addressRegion">Московская</span>, 
+      <span itemprop="addressLocality">Москва</span>, 
+      <span itemprop="streetAddress"> 1ый Басманный переулок, д. 5/20, стр. 2, оф. 35</span>
+  </div>
+  <div>Телефон: <a itemprop="telephone" href="tel:+74957447899">+7 (495) 744-78-99</a></div>
+  <div>Почта: <a itemprop="email" href="mailto:"></a></div>
+  <div>Факс: <a itemprop="telephone" href="tel:+74957447899">+7 (495) 744-78-99</a></div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+ /* window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '852130055260229',
+      xfbml      : true,
+      version    : 'v6.0'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+   */
+</script>
+
+
+<!--div class="modal">
+	<div class="modal-content">
+		<div class="modal-close">
+			<svg 
+			 xmlns="http://www.w3.org/2000/svg"
+			 xmlns:xlink="http://www.w3.org/1999/xlink"
+			 width="18px" height="19px">
+			<path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
+			 d="M17.995,3.164 L11.390,9.769 L17.839,16.217 L15.717,18.339 L9.269,11.890 L2.164,18.995 L0.005,16.836 L7.110,9.731 L0.161,2.782 L2.282,0.661 L9.231,7.610 L15.836,1.005 L17.995,3.164 Z"/>
+			</svg>
+		</div>
+			<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Kfe5aBCZEIU?rel=0&showinfo=0&autoplay=1&start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	</div>
+        </div-->
+
+        <div id="panel"><?$APPLICATION->ShowPanel();?></div>
+        <!-- Page Header : start -->
+
+        <div class="page-header-m">
+
+        </div>
+
+        <header class="page-header ">
+
+            <div class="row">
+
+                <div class="m_block-akcia"><span>%</span></div>
+                <div class="row tm fixed-top">
+
+
+                    <style>
+
+                        @media (max-width: 767.98px)
+                        {
+                            .navbar-nav-mob .navbar-toggler {
+                                position: absolute;
+                                left: 28px;right: 50px;}
+                                .navbar-nav-mob {
+                                 width: 100%;padding: 80px 0;    margin: 0;z-index:100;
+                             }
+                             .bt_g a {   width: 150px;
+                             }
+                             .bt_g {
+                                text-align: center;
+                                margin: -65px 0px 0px 100px;
+                            }
+                            header .fixed-top {
+                                top: 0;
+                                /*  width: calc(100% - 54px);*/
+                                float: left;
+                                left: 0px;
+                                margin: 0;
+                            }
+
+                            .acts_c {
+                             /*margin: -65px 0 0 0;*/
+                             left: 90px;
+                             }.page-header__top>.d-flex>div {
+                                /*width: 50%;*/line-height: 1em;
+                                }}
+
+                                .navbar-toggler {right: 15px;width: calc(100%);display: unset;
+                                }
+                            .page-header .acts {z-index: 35;/*width: calc(100%);*/}
+                            .nav-item ul {z-index: 99;}
+                            .tm {
+                                background-color: #fff;
+                                width: 100%;
+                                top: 88px;
+                                display: list-item;
+                                z-index: 40;
+                                height: 88px;
+                            }
+                            .page-header-m {
+                                display: block;
+                                position: absolute;
+                                width: 100%;
+                                z-index: 100;
+                            }
+                            .fixed-top {    top: 0px;
+
+                            }
+                            .t02,.au-fix-mob,.t01.sp{display:none;}
+                            .t01{display:block;}
+                            .acts {
+                              height: 88px;
+                              background-color: #DCE2C9;    margin-top: 88px;
+                              z-index: 100;
+                              position: relative;
+
+                          }
+                          .block-akcia {
+                           height: 80px;
+                           width: 69px;
+                           border-width: 0px 0px 30px 66px;
+                           border-style: solid;
+                           border-color: rgba(0,0,0,0) #F98837 transparent;
+                       }
+                       .block-akcia:after {box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+                       }
+                       .akcia {
+                        color: #FFF;
+                        font-size: 18px;
+                        font-weight: 600;
+                        text-align: center;
+                        position: absolute;
+                        z-index: 99;
+                        left: 15px;
+                        top: 20px;
+                    }
+                    .acts_a, .acts_b, .acts_c{
+
+                        float:left;}
+                        .u-fix {
+                            height: 31px;
+                            color: #000;
+                            font-size: 22px;
+                            font-weight: 600;
+                            line-height: 25px;
+                            padding: 0;
+                            margin: -50px 0 0 99px;
+                        }
+
+
+                        .au-fix,.au-fix-mob{
+                            height: 31px;
+                            color: #000;
+                            font-weight: 600;
+                            line-height: 28px;
+                            padding: 0;
+                            margin: -80px 0 0 99px;
+                            position: absolute;
+                        }
+
+                        .au-fix span,.au-fix-mob span{
+                            text-decoration:line-through;
+                        }
+                        .du-fix{
+                           height: 16px;
+                           color: #000;
+                           font-size: 16px;
+                           text-align: center;
+                           margin: -5px 30px 0 0;
+                           float: right;
+                       }
+                       .acts_b{
+                        background-image: url(https://iskoniwood.ru/local/templates/iskoni_2019/images/NY.svg);
+                        background-size: 100%;
+                        height: 70px;
+                        width: 217px;
+                        background-repeat: no-repeat;
+                        background-position-x: center;
+                        background-position-y: center;}
+                        .acts_b>div{  margin: 25px 0 0 0;}
+                        .acts_b img {
+                          height: 72.07px;
+                          width: 217px;
+
+                      }
+
+                      .bt_g {
+  /*   margin-top: 25px;
+    width: 160px;
+    border-radius: 3px;
+    background-color: #EC6F16;
+    /*  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);*/text-align: center;*/
+}
+
+
+.bt_g a{
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;  padding: 7px;
+    display: block;
+
+}
+.acts_c{
+    top: 25px;
+}
+.b24-web-form-popup-btn-6{
+    margin-top: 25px;
+    width: 160px;
+    border-radius: 3px;
+    background-color: #EC6F16;
+    /* box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18); */
+    text-align: center;
+    color: #fff;
+}
+
+button.link{
+    background: none;
+    border: none;
+}
+.slick-track .slick-slide img{-webkit-filter: brightness(100%);}
+</style>
+
+<div class="container fixed-top">
+    <div class="d-flex align-items-center">
+
+        <a class="navbar-brand" href="/">
+            <img src="<?=SITE_TEMPLATE_PATH?>/images/logo_top.svg" alt="Iskoni философия своего дома">
+        </a>
+
+        <div class="page-header__right ">
+            <div class="page-header__top">
+                <div class="d-flex align-items-start justify-content-between">
+
+                    <!-- <div class="d-flex align-items-center justify-content-between"> -->
+
+
+                     <!-- <a data-fancybox data-src="#callback" href="javascript:;" class="link cb-link">Заказать обратный звонок</a>-->
+                     <button class="b24-web-form-popup-btn-36 b24-web-form-popup-btn-54  link cb-link col-3">Заказать обратный звонок</button>
+                     <?if(!IS_PERSONAL):?>
+                     <div class="social col-4">
+                        <span>Следите за нами:</span>
+
+                        <ul class="list-inline">
+                            <?
+                            $vk = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_VK");
+
+                            if(!empty($vk)):
+                                $target = $vk == 'javascript:return false;' ? '' : 'target="_blank"';
+                                ?>
+                                <li>
+                                    <a href="<?=$vk?>" <?=$target?> >
+                                        <svg class="icon s-icon_vk_color"><use xlink:href="#s-icon_vk_color"></use></svg>
+                                    </a>
+                                </li>
+                                <?endif?>
+
+                                <?
+                                $fb = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_FB");
+
+                                if(!empty($fb)):
+                                    $target = $fb == 'javascript:return false;' ? '' : 'target="_blank"';
+                                    ?>
+                                    <li>
+                                        <a href="<?=$fb?>" <?=$target?> >
+                                            <svg class="icon s-icon_facebook_color"><use xlink:href="#s-icon_facebook_color"></use></svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UC2Cu_rdvqLqQBb4TQ10v-RQ" <?=$target?> >
+                                            <img style="top: 3px;    position: relative;    height: 16px;    width: 16px;"src="https://iskoni.ru/local/templates/iskoni_2019/images/youtube.svg">
+                                        </a>
+                                    </li>
+                                    <?endif?>
+
+
+                                    <?
+                                    $tg = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_TG");
+
+                                    if(!empty($tg)):
+                                        $target = $tg == 'javascript:return false;' ? '' : 'target="_blank"';
+                                        ?>
+                                        <li>
+                                            <a href="<?=$tg?>" <?=$target?> >
+                                                <svg class="icon s-icon_telegram_color"><use xlink:href="#s-icon_telegram_color"></use></svg>
+                                            </a>
+                                        </li>
+                                        <?endif?>
+
+                                        <?
+                                        $wa = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_WA");
+
+                                        if(!empty($wa)):
+                                            $target = $wa == 'javascript:return false;' ? '' : 'target="_blank"';
+                                            ?>
+                                            <li>
+                                                <a href="<?=$wa?>" <?=$target?> >
+                                                    <img class="icon" src="/local/templates/iskoni_2019/images/wa32.png" alt="">
+                                                </a>
+                                            </li>
+
+                                            <?endif?>
+
+                                            <?
+                                            $inst = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_INST");
+
+                                            if(!empty($inst)):
+                                                $target = $inst == 'javascript:return false;' ? '' : 'target="_blank"';
+                                                ?>
+                                                <li>
+                                                    <a href="<?=$inst?>" <?=$target?> style="width: 16px;height: 16px;">
+                                                        <img class="icon" src="/local/templates/iskoni_2019/images/instagram16-16.svg" alt="">
+                                                    </a>
+                                                </li>
+
+                                                <?endif?>
+
+                                            </ul>
+                                        </div>
+                                        <?endif?>
+
+                                        <div class="phones col-5">
+                                            <a href="tel:<?=\Bitrix\Main\Config\Option::get("grain.customsettings","PHONE")?>" class="phone phone_alloka"><?=\Bitrix\Main\Config\Option::get("grain.customsettings","PHONE")?></a>
+                                            <!--a href="tel:<?=\Bitrix\Main\Config\Option::get("grain.customsettings","PHONE_2")?>" class="phone"><?=\Bitrix\Main\Config\Option::get("grain.customsettings","PHONE_2")?></a-->
+
+                                        </div>
+
+                                        <a href="#" class="navbar-toggler">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </a>
+                                        <!-- </div> -->
+
+                            <?/*if($GLOBALS['USER']->IsAuthorized() ): ?>
+
+                            <div class="login">
+
+                                <a href="/personal/">
+                                    <svg class="icon s-icon_sign_in"><use xlink:href="#s-icon_sign_in"></use></svg>
+                                    <span>Добрый день, <?=$GLOBALS['USER']->GetFirstName()?>!</span>
+                                </a>
+
+                                <a href="<?=$APPLICATION->GetCurPageParam("logout=yes", array(
+                                 "login",
+                                 "logout",
+                                 "register",
+                                 "forgot_password",
+                                 "change_password"));?>" class="btn exit">
+                                    Выход
+                                </a>
+
+                                <?else:?>
+
+                                <a data-fancybox data-src="#auth" href="javascript:;">
+                                    <svg class="icon s-icon_sign_in"><use xlink:href="#s-icon_sign_in"></use></svg>
+                                    <span>Вход в личный кабинет</span>
+                                </a>
+
+                            </div>
+
+                            <?endif*/?>
+                        </div>
+                    </div>
+
+                    <?$APPLICATION->IncludeComponent(
+                    	"bitrix:menu",
+                    	"top",
+                    	array(
+                    		"ALLOW_MULTI_SELECT" => "N",
+                    		"CHILD_MENU_TYPE" => "left",
+                    		"DELAY" => "N",
+                    		"MAX_LEVEL" => "2",
+                    		"MENU_CACHE_GET_VARS" => array(
+                    		),
+                    		"MENU_CACHE_TIME" => "3600",
+                    		"MENU_CACHE_TYPE" => "A",
+                    		"MENU_CACHE_USE_GROUPS" => "Y",
+                    		"ROOT_MENU_TYPE" => "top",
+                    		"USE_EXT" => "N",
+                    		"COMPONENT_TEMPLATE" => "top"
+                    	),
+                    	false
+                    );?>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar-nav-mob" id="js-navbar">
+            <a href="#" class="navbar-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="navbar-nav-inner">
+
+                <?$APPLICATION->IncludeComponent(
+                	"bitrix:menu",
+                	"top",
+                	array(
+                		"ALLOW_MULTI_SELECT" => "N",
+                		"CHILD_MENU_TYPE" => "left",
+                		"DELAY" => "N",
+                		"MAX_LEVEL" => "2",
+                		"MENU_CACHE_GET_VARS" => array(
+                		),
+                		"MENU_CACHE_TIME" => "3600",
+                		"MENU_CACHE_TYPE" => "A",
+                		"MENU_CACHE_USE_GROUPS" => "Y",
+                		"ROOT_MENU_TYPE" => "top",
+                		"USE_EXT" => "N",
+                		"COMPONENT_TEMPLATE" => "top"
+                	),
+                	false
+                );?>
+
+                <!-- <div class="login">
+                    <a data-fancybox data-src="#auth" href="javascript:;">
+                        <svg class="icon s-icon_sign_in"><use xlink:href="#s-icon_sign_in"></use></svg>
+                        <span>Вход в личный кабинет</span>
+                    </a>
+                </div> -->
+
+                <div class="social">
+                    <span>Следите за нами:</span>
+
+                    <ul class="list-inline">
+                     <li>
+                        <a href="https://www.youtube.com/channel/UC2Cu_rdvqLqQBb4TQ10v-RQ" <?=$target?> >
+                            <img style="top: 7px;    position: relative;    height: 22px;    width: 22px;"src="/local/templates/iskoni_2019/images/youtube.svg">
+                        </a>
+                    </li>
+
+                    <?
+                    $vk = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_VK");
+
+                    if(!empty($vk)):
+                        $target = $vk == 'javascript:return false;' ? '' : 'target="_blank"';
+                        ?>
+                        <li>
+                            <a href="<?=$vk?>" <?=$target?> >
+                                <svg class="icon s-icon_vk_color"><use xlink:href="#s-icon_vk_color"></use></svg>
+                            </a>
+                        </li>
+                        <?endif?>
+
+                        <?
+                        $fb = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_FB");
+
+                        if(!empty($fb)):
+                            $target = $fb == 'javascript:return false;' ? '' : 'target="_blank"';
+                            ?>
+                            <li>
+                                <a href="<?=$fb?>" <?=$target?> >
+                                    <svg class="icon s-icon_facebook_color"><use xlink:href="#s-icon_facebook_color"></use></svg>
+                                </a>
+                            </li>
+                            <?endif?>
+
+
+                            <?
+                            $tg = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_TG");
+
+                            if(!empty($tg)):
+                                $target = $tg == 'javascript:return false;' ? '' : 'target="_blank"';
+                                ?>
+                                <li>
+                                    <a href="<?=$tg?>" <?=$target?> >
+                                        <svg class="icon s-icon_telegram_color"><use xlink:href="#s-icon_telegram_color"></use></svg>
+                                    </a>
+                                </li>
+                                <?endif?>
+
+                                <?
+                                $wa = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_WA");
+
+                                if(!empty($wa)):
+                                    $target = $wa == 'javascript:return false;' ? '' : 'target="_blank"';
+                                    ?>
+                                    <li>
+                                        <a href="<?=$wa?>" <?=$target?> >
+                                            <img class="icon" src="/local/templates/iskoni_2019/images/wa32.png" alt="">
+                                        </a>
+                                    </li>
+                                    <?endif?>
+
+                                    <?
+                                    $inst = \Bitrix\Main\Config\Option::get("grain.customsettings","SOC_INST");
+
+                                    if(!empty($inst)):
+                                        $target = $inst == 'javascript:return false;' ? '' : 'target="_blank"';
+                                        ?>
+                                        <li>
+                                            <a href="<?=$inst?>" <?=$target?> >
+                                                <img class="icon" src="/local/templates/iskoni_2019/images/instagram16-16.svg" alt="">
+                                            </a>
+                                        </li>
+                                        <?endif?>
+
+                                    </ul>
+                                </div>
+
+                                <!--<a data-fancybox data-src="#callback" href="javascript:;" class="link cb-link">Заказать обратный звонок</a>-->
+                            </div>
+                        </div>
+
+
+
+                    </header>
+
+
+
+                    <!-- Page Header : end -->
+
+                    <!-- Main content  : start -->
+                    <? if ($APPLICATION->GetCurPage(false) != SITE_DIR): ?>
+                        <main class="page-content">
+
+                            <?$APPLICATION->IncludeComponent(
+                               "bitrix:breadcrumb", 
+                               "template1", 
+                               array(
+                                  "PATH" => "",
+                                  "SITE_ID" => "s1",
+                                  "START_FROM" => "0",
+                                  "COMPONENT_TEMPLATE" => "template1"
+                              ),
+                               false
+                           );?>
+
+                           <? if (!defined('NO_PAGE_WRAP')): ?>
+
+                            <div class="section <?=defined('SECTION_CLASS') ? SECTION_CLASS : '' ?>">
+                                <div class="container">
+
+                                <? endif ?>
+
+                                <? endif ?>
