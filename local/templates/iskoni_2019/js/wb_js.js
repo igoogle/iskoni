@@ -4,7 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
   // jQuery(window).on("scroll", function () {
   //   $(this).scrollTop() > 60 ? $("body").addClass("_active_scroll") : $("body").removeClass("_active_scroll")
   // });
-
+  $('.one_progects__sl__inner').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+    infinite: true,
+    touchMove: true,
+    draggable: true,
+    lazyLoad: 'ondemand',
+    fade: true,
+  });
 
 
 
